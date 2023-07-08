@@ -1,6 +1,7 @@
 package formatter
 
 import (
+	"errors"
 	"testing"
 
 	"github.com/ryuheechul/termimagenator/pkg/image"
@@ -37,7 +38,7 @@ func Test_defaultFormatter_Format(t *testing.T) {
 				},
 			},
 			want: mo.Right[string, error](
-				&IdNoColonError{err: "no-colon"},
+				NoColonError,
 			),
 		},
 	}
@@ -51,7 +52,7 @@ func Test_defaultFormatter_Format(t *testing.T) {
 
 				return mo.Left[string, error](want)
 			}, func(want error) mo.Either[string, error] {
-				if _, got := d.Format(tt.args.img); got.Error() != want.Error() {
+				if _, got := d.Format(tt.args.img); !errors.Is(got, want) {
 					t.Errorf("error for defaultFormatter.Format() = %v, want %v", got, want)
 				}
 
