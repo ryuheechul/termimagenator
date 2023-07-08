@@ -15,7 +15,12 @@ import (
 type result string
 
 func list() tea.Msg {
-	return result(strings.Join(ls.ListWithDefaultFormat(), "\n"))
+	images, err := ls.ListWithDefaultFormat()
+	if err != nil {
+		panic(err)
+	}
+
+	return result(strings.Join(images, "\n"))
 }
 
 func off(p *tea.Program) {
