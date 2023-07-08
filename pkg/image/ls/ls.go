@@ -31,8 +31,8 @@ func List() []image.Image {
 }
 
 func ListFormatted(f image.Formatter) []string {
-	return lo.Map(List(), func(i image.Image, index int) string {
-		formatted, err := f.Format(i)
+	return lo.Map(List(), func(img image.Image, index int) string {
+		formatted, err := f.Format(img)
 		if err != nil {
 			panic(err)
 		}

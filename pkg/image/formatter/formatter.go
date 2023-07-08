@@ -43,4 +43,4 @@ func (_ defaultFormatter) Format(img image.Image) (string, error) {
 	return octets.String(), nil
 }
 
-var DefaultFormatter = defaultFormatter{}
+var DefaultFormatter = &defaultFormatter{}
