@@ -29,7 +29,13 @@ func (m Model) requestDeletion() tea.Msg {
 
 	return DeletionReqMsg{
 		plan.InitialPlan(lo.Map(rows, func(row table.Row, index int) string {
-			return row[1]
+			imageId, repoAndTag := row[0], row[1]
+
+			if strings.Contains(repoAndTag, "<none>") {
+				return imageId
+			}
+
+			return repoAndTag
 		})),
 	}
 }

@@ -4,11 +4,11 @@ import (
 	"context"
 
 	"github.com/docker/docker/api/types"
-	"github.com/docker/docker/client"
+	"github.com/ryuheechul/termimagenator/pkg/image/client"
 )
 
 func Remove(images []string) ([]string, []string, error) {
-	cli, err := client.NewClientWithOpts(client.FromEnv)
+	cli, err := client.Client()
 
 	untagged := []string{}
 	deleted := []string{}
