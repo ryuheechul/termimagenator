@@ -1,6 +1,9 @@
 # TerMImagenator
 
 or TMI which also can be think of as Too Many Images
+## Demo
+
+![vhs/demo.gif](./vhs/demo.gif)
 
 ## Why
 
@@ -20,7 +23,3 @@ So why not build a tool that scratches my back (and potentially yours too)!
   - https://github.com/charmbracelet/lipgloss
 - https://github.com/samber/lo
 - https://github.com/samber/mo
-
-## Status
-
-WIP

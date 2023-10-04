@@ -6,7 +6,7 @@
 
   # https://devenv.sh/packages/
   packages = with pkgs;[
-    git
+    vhs
   ];
 
   # https://devenv.sh/scripts/
@@ -14,7 +14,6 @@
 
   enterShell = ''
     hello
-    git --version
   '';
 
   # https://devenv.sh/languages/
