@@ -22,6 +22,14 @@ So why not build a tool that scratches my back (and potentially yours too)!
 
 ## Try
 
+### With Nix
+
+```bash
+nix run github:ryuheechul/termimagenator
+```
+
+### With Go
+
 ```bash
 go run github.com/ryuheechul/termimagenator/cmd/tmi@latest
 ```
