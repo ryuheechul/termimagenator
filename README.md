@@ -36,9 +36,15 @@ go run github.com/ryuheechul/termimagenator/cmd/tmi@latest
 
 ## Install
 
+### With Go
+
 ```bash
 go install github.com/ryuheechul/termimagenator/cmd/tmi@latest
 ```
+
+### Download Prebuilt Binaries
+
+https://github.com/ryuheechul/termimagenator/releases/latest
 
 ## Core Dependencies
 
