@@ -2,8 +2,8 @@ name: Release Go Binaries
 
 on:
   release:
-    types: [created]
-  workflow_dispatch:
+    types: [created] # doesn't kickoff if the tag didn't contain this workflow already
+  workflow_dispatch: # to allow manual running of this workflow
 
 permissions:
     contents: write
