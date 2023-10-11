@@ -26,3 +26,6 @@ devenv.local.nix
 
 # Go workspace file
 go.work
+
+# result binary
+tmi
