@@ -27,3 +27,4 @@ jobs:
         goarch: ${{ matrix.goarch }}
         project_path: "./cmd/tmi"
         binary_name: tmi
+        pre_command: export CGO_ENABLED=0
